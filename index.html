@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10233f">
+<meta name="description" content="GMP Services temporary inbox demo connected to a temporary email API.">
+<title>GMP Services — Temporary Email</title>
+<style>
+:root{color-scheme:light;--navy:#10233f;--blue:#2563eb;--ink:#172033;--muted:#667085;--line:#e5eaf1;--bg:#f4f7fb;--white:#fff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font:16px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink)}
+header{background:var(--white);border-bottom:1px solid var(--line)}.head{max-width:1100px;margin:auto;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.logo{width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,#10233f,#2563eb);display:grid;place-items:center;color:white;font-weight:900;letter-spacing:-1px}.brand strong{display:block;font-size:18px}.brand small{color:var(--muted)}nav{display:flex;gap:18px}nav a{color:#344054;text-decoration:none;font-weight:600;font-size:14px}
+main{max-width:960px;margin:42px auto;padding:0 18px}.hero{text-align:center;margin-bottom:28px}.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#e8efff;color:#1d4ed8;border-radius:999px;padding:6px 12px;font-size:12px;font-weight:800;letter-spacing:.08em}.dot{width:8px;height:8px;border-radius:50%;background:#16a34a}.hero h1{font-size:clamp(32px,5vw,48px);line-height:1.1;letter-spacing:-.04em;margin:16px 0 12px;color:var(--navy)}.hero p{margin:0 auto;color:var(--muted);max-width:620px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:22px;box-shadow:0 14px 40px #162b4d0b;overflow:hidden}.cardhead{padding:22px 24px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:12px}.cardhead h2{margin:0;font-size:19px}.status{font-size:12px;font-weight:800;color:#166534;background:#dcfce7;border-radius:999px;padding:6px 10px}.content{padding:24px}.label{font-size:13px;font-weight:800;color:#475467;margin-bottom:8px;display:block}.addressrow{display:flex;gap:10px}.address{min-width:0;flex:1;padding:14px 15px;border:1px solid #d0d5dd;border-radius:12px;background:#f9fafb;font-size:15px;overflow-wrap:anywhere;display:flex;align-items:center;min-height:52px}.buttons{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.btn{border:0;border-radius:11px;padding:12px 16px;font:700 14px inherit;cursor:pointer;min-height:44px}.btn:disabled{opacity:.55;cursor:not-allowed}.primary{background:var(--blue);color:#fff}.secondary{background:#eef2f7;color:#243047}.danger{background:#fff0f0;color:#b42318}.note{font-size:13px;color:var(--muted);margin:14px 0 0}.error{display:none;margin-top:14px;padding:12px 14px;background:#fff1f0;color:#b42318;border:1px solid #ffccc7;border-radius:10px;font-size:14px}.ad{margin:18px 0;padding:14px;border:1px dashed #d0d5dd;border-radius:12px;text-align:center;color:#98a2b3;font-size:11px;letter-spacing:.1em;background:#fafbfc}.inboxhead{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:28px 0 12px}.inboxhead h2{font-size:20px;margin:0}.count{font-size:13px;color:var(--muted)}.empty{padding:42px 18px;text-align:center;color:var(--muted)}.empty .emoji{font-size:34px}.empty strong{display:block;color:#344054;margin:8px 0}.messages{display:grid;gap:10px}.message{border:1px solid var(--line);border-radius:12px;padding:14px}.message-top{display:flex;justify-content:space-between;gap:10px}.message strong{overflow-wrap:anywhere}.message small{color:var(--muted)}.message p{margin:8px 0 0;white-space:pre-wrap;overflow-wrap:anywhere}.message button{margin-top:10px}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0}.feature{padding:18px;border:1px solid var(--line);border-radius:16px;background:#fff}.feature b{display:block;margin:8px 0 4px}.feature p{font-size:13px;color:var(--muted);margin:0}footer{text-align:center;color:var(--muted);font-size:13px;padding:30px 15px 42px}
+@media(max-width:620px){.head{padding:13px 16px}nav{gap:10px}nav a{font-size:12px}.brand small{font-size:11px}main{margin:28px auto}.content{padding:17px}.cardhead{padding:18px}.addressrow{flex-direction:column}.buttons .btn{flex:1}.features{grid-template-columns:1fr}.inboxhead{align-items:flex-start}}
+</style>
+</head>
+<body>
+<header><div class="head"><a class="brand" href="#"><span class="logo">GMP</span><span><strong>GMP Services</strong><small>Global MultiPro Services</small></span></a><nav><a href="#inbox">Inbox</a><a href="#contact">Contact</a></nav></div></header>
+<main>
+<section class="hero"><span class="eyebrow"><span class="dot"></span> SIMPLE · QUICK · TEMP MAIL</span><h1>Temporary email.<br>Less spam. More control.</h1><p>Create a temporary inbox for quick testing and sign-ups. Addresses last 10 minutes and incoming messages appear here when received.</p></section>
+<div class="ad">ADVERTISEMENT SLOT — TOP BANNER</div>
+<section class="card" aria-labelledby="box-title">
+<div class="cardhead"><h2 id="box-title">Your temporary inbox</h2><span class="status" id="status">Ready</span></div>
+<div class="content">
+<label class="label" for="address">Your email address</label>
+<div class="addressrow"><div class="address" id="address" aria-live="polite">Click “Generate email” to create an address</div><button class="btn secondary" id="copy" disabled>Copy</button></div>
+<div class="buttons"><button class="btn primary" id="generate">＋ Generate email</button><button class="btn secondary" id="refresh" disabled>↻ Refresh inbox</button><button class="btn danger" id="delete" disabled>Delete address</button></div>
+<p class="note" id="expiry">Temporary addresses expire after 10 minutes. Do not use for sensitive accounts or confidential information.</p>
+<div class="error" id="error" role="alert"></div>
+</div></section>
+<div class="ad">ADVERTISEMENT SLOT — INBOX</div>
+<section id="inbox"><div class="inboxhead"><h2>Inbox messages</h2><span class="count" id="count">0 messages</span></div><div class="card"><div class="empty" id="empty"><div class="emoji">📭</div><strong>Your inbox is empty</strong><span>Generate an address, then refresh to check for mail.</span></div><div class="content messages" id="messages" hidden></div></div></section>
+<div class="features"><div class="feature">⚡<b>Quick address</b><p>Generate a temporary email address with one click.</p></div><div class="feature">📥<b>Inbox view</b><p>Refresh to check messages sent to your temporary address.</p></div><div class="feature">🧹<b>Easy reset</b><p>Clear the current address from this browser when finished.</p></div></div>
+<div class="ad">ADVERTISEMENT SLOT — FOOTER BANNER</div>
+</main><footer id="contact">© 2026 GMP Services · Global MultiPro Services · gmp-services.org<br>Temporary inboxes are public-service style inboxes; do not use them for sensitive or private communications.</footer>
+<script>
+const $ = id => document.getElementById(id);
+let inbox = null;
+let refreshTimer = null;
+const callApi = async payload => {
+  const response = await fetch('/.netlify/functions/temp-mail', {
+    method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload)
+  });
+  const data = await response.json().catch(()=>({error:'Unexpected server response.'}));
+  if (!response.ok) throw new Error(data.error || `Request failed (${response.status}).`);
+  return data;
+};
+function showError(message=''){ $('error').textContent=message; $('error').style.display=message?'block':'none'; }
+function setBusy(busy){ $('generate').disabled=busy; $('refresh').disabled=busy||!inbox; $('delete').disabled=busy||!inbox; $('copy').disabled=busy||!inbox; }
+function stopPolling(){ if(refreshTimer) clearInterval(refreshTimer); refreshTimer=null; }
+function formatDate(value){const d=new Date(value);return Number.isNaN(d.getTime())?'':d.toLocaleString();}
+function clearInbox(){stopPolling();inbox=null;$('address').textContent='Click “Generate email” to create an address';$('status').textContent='Ready';$('expiry').textContent='Temporary addresses expire after 10 minutes. Do not use for sensitive accounts or confidential information.';$('messages').innerHTML='';$('messages').hidden=true;$('empty').hidden=false;$('count').textContent='0 messages';setBusy(false);}
+async function generate(){showError();setBusy(true);$('status').textContent='Creating…';try{const data=await callApi({action:'create'});if(!data.address||!data.token)throw new Error('The provider response was incomplete.');inbox={address:data.address,token:data.token,expiresAt:data.expiresAt};$('address').textContent=data.address;$('status').textContent='Live inbox';$('expiry').textContent='Expires at '+formatDate(data.expiresAt)+'. Refresh to check for incoming messages.';$('empty').hidden=false;$('messages').hidden=true;$('messages').innerHTML='';$('count').textContent='0 messages';setBusy(false);await refresh();refreshTimer=setInterval(()=>{if(inbox)refresh(true)},8000);}catch(e){$('status').textContent='Not connected';showError(e.message+' Check the Netlify function deployment and API key setting.');setBusy(false);}}
+async function refresh(quiet=false){if(!inbox)return;if(!quiet)showError();$('refresh').disabled=true;try{const data=await callApi({action:'messages',token:inbox.token});if(!Array.isArray(data))throw new Error('The inbox response was not in the expected format.');renderMessages(data);$('status').textContent='Live inbox';}catch(e){if(!quiet)showError(e.message);$('status').textContent='Check connection';}finally{$('refresh').disabled=!inbox;}}
+function renderMessages(items){$('count').textContent=`${items.length} message${items.length===1?'':'s'}`;$('empty').hidden=items.length>0;$('messages').hidden=items.length===0;$('messages').innerHTML='';for(const m of items){const card=document.createElement('article');card.className='message';const top=document.createElement('div');top.className='message-top';const from=document.createElement('strong');from.textContent=m.from||'Unknown sender';const date=document.createElement('small');date.textContent=formatDate(m.receivedAt);top.append(from,date);const subject=document.createElement('p');subject.textContent=m.subject||'(No subject)';const body=document.createElement('p');body.textContent=m.bodyText||stripHtml(m.bodyHtml)||'(No text body)';card.append(top,subject,body);const del=document.createElement('button');del.className='btn secondary';del.textContent='Delete message';del.addEventListener('click',async()=>{try{await callApi({action:'deleteMessage',token:inbox.token,id:m.id});await refresh();}catch(e){showError(e.message)}});card.append(del);$('messages').append(card);}}
+function stripHtml(html){if(!html)return '';const doc=new DOMParser().parseFromString(html,'text/html');return doc.body.textContent||'';}
+$('generate').addEventListener('click',generate);
+$('refresh').addEventListener('click',()=>refresh());
+$('delete').addEventListener('click',()=>{clearInbox();showError('This clears the address from this page. The provider automatically deletes its inbox when the 10-minute session expires.');});
+$('copy').addEventListener('click',async()=>{if(!inbox)return;try{await navigator.clipboard.writeText(inbox.address);$('copy').textContent='Copied!';setTimeout(()=>$('copy').textContent='Copy',1200);}catch{showError('Copy was blocked by the browser. Select and copy the address manually.');}});
+</script>
+</body></html>
